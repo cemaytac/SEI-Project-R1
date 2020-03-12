@@ -3,6 +3,9 @@ const team1box = document.querySelector(".team1Box");
 const team2box = document.querySelector(".team2Box");
 const team1name = document.querySelector(".team1Name");
 const team2name = document.querySelector(".team2Name");
+const score1 = document.querySelector(".score1")
+const score2 = document.querySelector(".score2")
+const score = Math.floor(Math.random()) * 5
 
 button.addEventListener('click', async () => {
   const response = await axios.get("https://montanaflynn-fifa-world-cup.p.rapidapi.com/teams", {
@@ -13,7 +16,7 @@ button.addEventListener('click', async () => {
   })
     .then(response => {
 
-      //To randomize the array//
+      //To randomize the array of teams//
       const randomTeam1 = Math.random()
       const randomTeam2 = Math.random()
       console.log(response.data[Math.floor(randomTeam1 * response.data.length)].title)
@@ -23,5 +26,4 @@ button.addEventListener('click', async () => {
     })
 
 })
-
 
