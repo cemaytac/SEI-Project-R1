@@ -5,8 +5,8 @@ const team1name = document.querySelector(".team1Name");
 const team2name = document.querySelector(".team2Name");
 const score1 = document.querySelector(".score1")
 const score2 = document.querySelector(".score2")
-const score = Math.floor(Math.random()) * 5
-
+const score = Math.floor(Math.random() * 6)
+console.log(score);
 button.addEventListener('click', async () => {
   const response = await axios.get("https://montanaflynn-fifa-world-cup.p.rapidapi.com/teams", {
     "headers": {
